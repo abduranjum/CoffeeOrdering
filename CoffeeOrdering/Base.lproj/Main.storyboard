@@ -50,10 +50,65 @@
                     <view key="view" contentMode="scaleToFill" id="KeT-MO-vzn">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Nk-k5-KUV">
+                                <rect key="frame" x="0.0" y="56" width="428" height="523"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nht-YO-avt">
+                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nht-YO-avt" id="iBX-hL-nRK">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxe-hw-OaJ">
+                                <rect key="frame" x="114" y="690" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Pi3-vP-X8g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ze-RE-iAJ">
+                                <rect key="frame" x="114" y="754" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ioC-ON-SAX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2MP-4i-J3x">
+                                <rect key="frame" x="111" y="609" width="206" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bwu-70-qg6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Nk-k5-KUV" firstAttribute="leading" secondItem="Bwu-70-qg6" secondAttribute="leading" id="1Eg-ip-UxE"/>
+                            <constraint firstItem="Bwu-70-qg6" firstAttribute="bottom" secondItem="1ze-RE-iAJ" secondAttribute="bottom" constant="50" id="4wA-hN-lSL"/>
+                            <constraint firstItem="cxe-hw-OaJ" firstAttribute="centerX" secondItem="KeT-MO-vzn" secondAttribute="centerX" id="Ev1-0k-5Ik"/>
+                            <constraint firstItem="2MP-4i-J3x" firstAttribute="centerX" secondItem="Bwu-70-qg6" secondAttribute="centerX" id="KeC-in-gei"/>
+                            <constraint firstItem="cxe-hw-OaJ" firstAttribute="top" secondItem="2MP-4i-J3x" secondAttribute="bottom" constant="50" id="Rrr-4L-L9Z"/>
+                            <constraint firstItem="0Nk-k5-KUV" firstAttribute="top" secondItem="Bwu-70-qg6" secondAttribute="top" id="XYe-RR-DTt"/>
+                            <constraint firstItem="2MP-4i-J3x" firstAttribute="top" secondItem="0Nk-k5-KUV" secondAttribute="bottom" constant="30" id="hRn-H1-EPY"/>
+                            <constraint firstItem="Bwu-70-qg6" firstAttribute="trailing" secondItem="0Nk-k5-KUV" secondAttribute="trailing" id="j3M-3B-oUh"/>
+                            <constraint firstItem="1ze-RE-iAJ" firstAttribute="centerX" secondItem="KeT-MO-vzn" secondAttribute="centerX" id="uoU-zW-Zlg"/>
+                            <constraint firstItem="1ze-RE-iAJ" firstAttribute="top" secondItem="cxe-hw-OaJ" secondAttribute="bottom" constant="30" id="wPB-ys-mW3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Order" id="7LY-5O-GuO"/>
+                    <navigationItem key="navigationItem" title="Add New Order" id="7LY-5O-GuO">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="bWb-Nj-CeZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="qfO-fT-x0z"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpW-rl-Om7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +154,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
